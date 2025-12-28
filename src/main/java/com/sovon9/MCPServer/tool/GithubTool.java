@@ -11,7 +11,7 @@ public class GithubTool {
     public String sovonGithubLink()
     {
         String link = """
-                https://github.com/sovon9
+                https://github.com/sovon9/MCP
                 """;
         return link;
     }

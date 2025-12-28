@@ -16,10 +16,4 @@ public class McpServerApplication {
 		SpringApplication.run(McpServerApplication.class, args);
 	}
 
-	@Bean
-	public List<ToolCallback> githubToolCallback(GithubTool githubTool)
-	{
-		return List.of(ToolCallbacks.from(githubTool));
-	}
-
 }
