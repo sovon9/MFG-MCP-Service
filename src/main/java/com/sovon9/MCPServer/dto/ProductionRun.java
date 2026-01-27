@@ -1,8 +1,9 @@
-package com.sovon9.MCPServer;
+package com.sovon9.MCPServer.dto;
 
 import java.time.LocalDateTime;
 
 public class ProductionRun {
+    private String id;
     private String lineId;
     private String productId;
     private String shiftId;
@@ -10,6 +11,14 @@ public class ProductionRun {
     private LocalDateTime endTime;
     private Integer plannedQuantity;
     private Integer actualQuantity;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getLineId() {
         return lineId;
