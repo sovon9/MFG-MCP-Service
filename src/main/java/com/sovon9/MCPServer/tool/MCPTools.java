@@ -1,6 +1,7 @@
 package com.sovon9.MCPServer.tool;
 
 import com.sovon9.MCPServer.dto.DowntimeEvent;
+import com.sovon9.MCPServer.dto.MachineData;
 import com.sovon9.MCPServer.dto.ProductionRun;
 import com.sovon9.MCPServer.dto.QualityEvent;
 import org.springaicommunity.mcp.annotation.McpTool;
@@ -57,11 +58,11 @@ public class MCPTools {
 
     @McpTool(name = "getMachineInfo", description = "Returns the human-readable name and type of a machine.\n" +
             "  Use this when explaining downtime or defects so responses use real machine names instead of IDs")
-    public List<QualityEvent> getMachineInfo(@McpToolParam(description = "Machine ID, e.g. MC001") String machineId)
+    public MachineData getMachineInfo(@McpToolParam(description = "Machine ID, e.g. MC001") String machineId)
     {
         return webClient.get().uri(uriBuilder -> uriBuilder.path("/machine/" + machineId)
                         .build())
-                .retrieve().bodyToMono(new ParameterizedTypeReference<List<QualityEvent>>() {}).block();
+                .retrieve().bodyToMono(new ParameterizedTypeReference<MachineData>() {}).block();
     }
 
 }
