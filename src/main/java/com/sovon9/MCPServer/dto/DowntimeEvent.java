@@ -6,8 +6,8 @@ public class DowntimeEvent {
 
     private String id;
     private String runId;
-    private String line_id;
-    private String machine_id;
+    private String lineId;
+    private String machineId;
     private String reason;
     private String category;
     private LocalDateTime startTime;
@@ -30,20 +30,20 @@ public class DowntimeEvent {
         this.runId = runId;
     }
 
-    public String getLine_id() {
-        return line_id;
+    public String getLineId() {
+        return lineId;
     }
 
-    public void setLine_id(String line_id) {
-        this.line_id = line_id;
+    public void setLineId(String lineId) {
+        this.lineId = lineId;
     }
 
-    public String getMachine_id() {
-        return machine_id;
+    public String getMachineId() {
+        return machineId;
     }
 
-    public void setMachine_id(String machine_id) {
-        this.machine_id = machine_id;
+    public void setMachineId(String machineId) {
+        this.machineId = machineId;
     }
 
     public String getReason() {
